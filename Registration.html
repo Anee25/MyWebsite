@@ -1,0 +1,101 @@
+<html>
+<head>
+	<title>Decor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="D:\bootstrap.min.css">
+	<script src="C:\Users\Admin\Downloads\bootstrap-5.0.2-dist.zip\bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js"></script>
+<style>
+.form-box {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 3px solid black;
+      border-radius: 10px;
+    }
+body{
+background:transparent;
+backdrop-filter: blur(2px);
+background-image:url("15.jpg");
+background-size:cover;
+background-position:center;
+}
+</style>
+
+<script>
+function validate(){
+let name=document.getElementById("name").value;
+let mob=document.getElementById("mobile").value;
+let mail=document.getElementById("email").value;
+let address=document.getElementById("add").value;
+
+if(name==="")
+   {
+	alert("Please Enter Your Name.");
+	return false;
+   }
+if(mob==="")
+   {
+	alert("Please Enter Your Mobile Number.");
+	return false;
+   }
+if(mail==="")
+   {
+	alert("Please Enter Your Email.");
+	return false;
+   }
+if(address==="")
+   {
+	alert("Please Enter Your Address.");
+	return false;
+   }
+alert("Registration Form Submitted Successfully.");
+}
+</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<a class="navbar-brand">Velvet & Veneer</a>
+		
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav ml-auto">
+		   <li><a class="navbar-brand" href="#">Registration</a></li>
+       		   <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+		</ul>
+	</nav>	
+	</div>
+
+
+	<h2 class="text-center">Customer Registration's Page</h2>
+	<form action="login.html" onsubmit="return validate()" class="container form-box">
+	   <label>Name:</label>
+	      <input type="text" id="name" class="form-control" placeholder="Enter your name here"><br>
+	   <label>Mobile No.:</label>
+	      <input type="text" id="mobile" class="form-control" placeholder="Enter your mobile no. here"><br>
+	   <label>Email:</label>
+	      <input type="text" id="email" class="form-control" placeholder="Enter your email here" ><br>
+	   <label>Address:</label>
+	      <input type="text" id="add" class="form-control" placeholder="Enter your address here"><br>
+	   <label>Gender:</label>
+	      <input type="radio" id="male" name="gender"> Male
+	      <input type="radio" id="female" name="gender"> Female
+	      <input type="radio" id="other" name="gender"> Other	<br>
+
+	   <label>Hobby:</label>
+	      <input type="checkbox" id="reading"> Reading
+	      <input type="checkbox" id="writing"> Writing
+	      <input type="checkbox" id="singing"> Singing  <br>
+	   
+	<button type="submit" class="btn btn-success">Submit</button>  
+	<button type="reset" class="btn btn-primary">Reset</button>
+	
+
+	<p class="text-center">Already register ? <a href="login.html">Login here</a></p>
+	</form>
+</body>
+</html>

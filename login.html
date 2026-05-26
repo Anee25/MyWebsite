@@ -1,0 +1,96 @@
+<html>
+<head>
+	<title>Decor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="D:\bootstrap.min.css">
+	<script src="C:\Users\Admin\Downloads\bootstrap-5.0.2-dist.zip\bootstrap-5.0.2-dist\js\bootstrap.bundle.min.js"></script>
+<style>
+.form-box {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 3px solid black;
+      border-radius: 10px;
+    }
+body{
+background:transparent;
+backdrop-filter: blur(2px);
+background-image:url("15.jpg");
+background-size:cover;
+background-position:center;
+}
+</style>
+<script>
+	function validate(){
+	   let user=document.getElementById("user").value;
+	   let password=document.getElementById("pwd").value;
+
+	if(user===""){
+		alert("Please Enter Username.");
+		return false;
+	}
+	if(password===""){
+		alert("Please Enter Password.");
+		return false;
+	}
+	alert("Login Successfully.");
+	return true;
+	}
+</script>
+</head>
+
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<a class="navbar-brand">Velvet & Veneer</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav ml-auto">		
+		   <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+       		   <li><a class="navbar-brand" href="#">Login</a></li>
+		</ul>
+	</nav>	
+	</div>
+
+	<h2 class="text-center">Customer Login's Page</h2>
+	<form action="home.html" onsubmit="return validate()" class="container form-box">
+	   <label>Username:</label>
+		<input type="text" id="user" class="form-control" placeholder="Enter Username here..."><br>
+	   <label>Password:</label>
+		<input type="password" id="pwd" class="form-control" placeholder="Enter Password here..."><br>
+	
+	
+	<button type="submit" class="btn btn-success">Submit</button>
+	<button type="reset" class="btn btn-primary">Reset</button>
+	
+	<p class="text-center">Don’t have an account ? <a href="registration.html">Register Here</a></p>
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

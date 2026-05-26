@@ -1,0 +1,215 @@
+<html>
+<head>
+	<title>Decor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="D:\bootstrap.min.css">
+	<script type="text/javascript" src="D:\BCA\SYBCA\SEM-4\WD-2 Practical\node_modules\jquery\dist\jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#section").fadeIn(2000);
+	});
+</script>
+<style>
+#section{
+   display:none;
+}
+.form-box {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+
+img:hover {
+	border-radius:10px;
+	transition:0.3s ease-in;
+}
+
+button:hover {
+	border-radius:10px;
+	transition:0.3s ease-in;
+	background-color:bisque;
+}
+body{
+background-image:url("50.jpg");
+background-size:cover;
+background-position:center;
+}
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<a class="navbar-brand">Velvet & Veneer</a>
+		<ul class="navbar-nav ml-auto">
+		   <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+		   <li><a class="navbar-brand" href="#">Decor</a></li>
+       		   <li class="nav-item"><a class="nav-link" href="accessories.html">Home Accessories</a></li>
+		   <li class="nav-item"><a class="nav-link" href="wall.html">Wall Decor</a></li>
+		</ul>
+	</div>
+	</nav>	<br>
+
+<div id="section">
+<div class="container">
+<input type="text" id="search" placeholder="Search product..." onkeyup="searchData()">
+<ul id="result"></ul>
+<script>
+ const users=[{product:"Blessings Buddha",Rupees:"Rs. 930.00"},
+	      {product:"Lucky Charm Elephants",Rupees:"Rs. 2,990.00"},
+	      {product:"Swirl Marble Glass Vase",Rupees:"Rs. 2,790.00"},
+	      {product:"Mosaic Super Soft",Rupees:"Rs. 590.00"},
+	      {product:"Water Absorbent Mat",Rupees:"Rs. 299.00"},
+	      {product:"Crochet Mat",Rupees:"Rs. 999.00"},
+	      {product:"Floral Window Curtains",Rupees:"Rs. 666.00"},
+	      {product:"Premium Cotton Curtain",Rupees:"Rs. 720.00"},
+	      {product:"Room Darkening Curtain",Rupees:"Rs. 990.00"}];
+	      
+function loaddata(data){
+  const ul = document.getElementById("result");
+   ul.innerHTML="";
+  data.forEach(user => {
+    const li = document.createElement("li");
+    li.textContent = `${user.product} - ${user.Rupees}`;
+    ul.appendChild(li);
+  });}
+loaddata(users);
+function searchData() {
+  const searchValue = document.getElementById("search").value.toLowerCase();
+
+  const filteredData = users.filter(user =>
+    user.product.toLowerCase().includes(searchValue)
+  );
+
+  loaddata(filteredData);
+}
+</script>
+</div>
+
+<div class="container">
+	<h3>Decorative Items</h3>
+<div class="row">
+	<div class="col-sm-4">
+	<div class="form-box">
+	   <img src="19.jpg" alt="wall1" height="300" width="300">
+		<h3>Blessings Buddha</h3>
+		<p>Rs. 930.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="20.jpg" alt="wall1" height="300" width="300">
+		<h3>Lucky Charm Elephants</h3>
+		<p>Rs. 2,990.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="21.jpg" alt="wall1" height="300" width="300">
+		<h3>Swirl Marble Glass Vase</h3>
+		<p>Rs. 2,790.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+</div><br>
+
+<h3>Door Mat</h3>
+<div class="row">
+	<div class="col-sm-4">
+	<div class="form-box">
+	   <img src="41.jpg" alt="wall1" height="300" width="300">
+		<h3>Mosaic Super Soft</h3>
+		<p>Rs. 590.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="42.jpg" alt="wall1" height="300" width="300">
+		<h3>Water Absorbent Mat</h3>
+		<p>Rs. 299.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="43.jpg" alt="wall1" height="300" width="300">
+		<h3>Crochet Mat</h3>
+		<p>Rs. 999.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+</div><br>
+
+<h3>Window Curtains</h3>
+<div class="row">
+<div class="col-sm-4">
+	<div class="form-box">
+	<img src="52.jpg" alt="wall1" height="300" width="300">
+		<h3>Floral Window Curtains</h3>
+		<p>Brown Polyester (6ft)</p>
+		<p>2(Pcs)</p>
+		<p>Rs. 666.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="45.jpg" alt="wall1" height="300" width="300">
+		<h3> Premium Cotton Curtain</h3>
+		<p>Curtains (5ft)</p>
+		<p>2(Pcs)</p>
+		<p>Rs. 720.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+<div class="col-sm-4">
+	<div class="form-box">
+	   <img src="46.jpg" alt="wall1" height="300" width="300">
+		<h3>Room Darkening Curtain</h3>
+		<p>Curtains (5*4ft)</p>
+		<p>2(Pcs)</p>
+		<p>Rs. 990.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div><br>
+	<p>
+		<a href="#">Back To Top</a>
+	</p>
+
+</div><br>
+</div>
+</div>
+ 
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

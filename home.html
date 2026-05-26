@@ -1,0 +1,106 @@
+<html>
+<head>
+	<title>Decor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="D:\bootstrap.min.css">
+	<script type="text/javascript" src="D:\BCA\SYBCA\SEM-4\WD-2 Practical\node_modules\jquery\dist\jquery.min.js"></script>	
+<script>
+$(document).ready(function(){
+	$("#section").slideDown(2000);
+});
+</script>
+
+<style>
+#section{
+   display:none;
+}
+body{
+background-image:url("50.jpg");
+background-size:cover;
+background-position:center;
+}
+.form-box {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+</style>
+</head>
+
+
+<body>
+	<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+	<a class="navbar-brand">Velvet & Veneer</a>
+
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<ul class="navbar-nav ml-auto">
+		   <li><a class="navbar-brand" href="#">Home</a></li>
+		   <li class="nav-item"><a class="nav-link" href="decor.html">Decor</a></li>
+       		   <li class="nav-item"><a class="nav-link" href="accessories.html">Home Accessories</a></li>
+		   <li class="nav-item"><a class="nav-link" href="wall.html">Wall Decor</a></li>
+		</ul>
+	</div>
+	</nav>	<br>
+	
+
+<form action="decor.html">
+<div id="section">
+<div class="container-fluid">
+	<div class="row">
+	<div class="col-sm-6">
+	<h3>Where Style Meets Comfort.</h3>
+	<p>Discover thoughtfully designed home décor that brings warmth, elegance, and personality to every corner of your space.</p>
+	<a href="decor.html" class="btn btn-dark active">Shop Collection</a><br><br><br>
+		<h3> Inspired Living, Beautifully Designed</h3>
+		<p>We believe your home should tell your story. Our curated décor pieces blend modern design with timeless charm—crafted to create spaces that feel warm, welcoming, and uniquely yours.</p><br><br>
+
+	<h3>Designed for Modern Living</h3>
+	<p>Beauty without compromise</p>
+	<p>Trusted by happy homes worldwide</p>
+	<p>
+		<a href="#">Back To Top</a>
+	</p>
+	</div><br><br>
+	
+	<div class="col-sm-6">
+	   <img src="51.jpg" alt="home" height="500" width="500">
+	</div>
+	</div>
+</div><br><br>
+
+<div class="jumbotron" style="margin-bottom:0">
+<div class="container-fluid">
+   <div class="row">
+	<div class="col-sm-4">
+	  <p>Monday - Saturday</p>
+	  <p>Contact No.: +91 9545411221</p>
+	  <p>Email: info@velvetveneer.com</p>
+	  <p>Online Delivery Only</p>
+	</div>
+	<div class="col-sm-4">
+	  <p>About</p>
+	  <a href="contact.html">Contact Us</a><br><br>
+	  <a href="privacy.html">Privacy & Policy</a><br><br>
+	</div>
+	<div class="col-sm-4">
+	  <label>Name:</label>
+	  <input type="text" placeholder="Enter Your Name Here..."><br>
+	  <label>Email:</label>
+	  <input type="text" placeholder="Enter Your Email Here..."><br>
+	  <label>Feedback:</label>
+	  <textarea name="feed" id="fb" placeholder="Give your feedback here..."></textarea><br>
+	  <button type="button" class="btn btn-primary">Submit</button>
+	</div>
+   </div>
+</div>
+</div>	
+</form>
+</body>
+</html>

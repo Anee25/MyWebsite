@@ -1,0 +1,181 @@
+<html>
+<head>
+	<title>Decor</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<link rel="stylesheet" href="D:\bootstrap.min.css">
+	<script type="text/javascript" src="D:\BCA\SYBCA\SEM-4\WD-2 Practical\node_modules\jquery\dist\jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#section").fadeIn(2000);
+	});
+</script>
+<style>
+#section{
+   display:none;
+}
+.form-box {
+      max-width: 500px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid black;
+      border-radius: 10px;
+    }
+body{
+background-image:url("50.jpg");
+background-size:cover;
+background-position:center;
+}
+</style>
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+	<span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="collapsibleNavbar">
+		<a class="navbar-brand">Velvet & Veneer</a>
+		<ul class="navbar-nav ml-auto">
+		   <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+		   <li class="nav-item"><a class="nav-link" href="decor.html">Decor</a></li>
+       		   <li><a class="navbar-brand" href="#">Home Accessories</a></li>
+		   <li class="nav-item"><a class="nav-link" href="wall.html">Wall Decor</a></li>
+		</ul>
+	</div>
+	</nav>	<br>
+
+
+<div id="section">
+<div class="container">
+<input type="text" id="search" placeholder="Search product..." onkeyup="searchData()">
+<ul id="result"></ul>
+<script>
+ const users=[{product:"Lotus Lamp",Rupees:"Rs. 2,590.00"},
+	      {product:"Tree Lamp",Rupees:"Rs. 1,370.00"},
+	      {product:"Decorative Lamp",Rupees:"Rs. 5,540.00"},
+	      {product:"Wall Clock",Rupees:"Rs. 2,980.00"},
+	      {product:"Creative Clock",Rupees:"Rs. 4,990.00"},
+	      {product:"Lighting clock",Rupees:"Rs. 5,550.00"},
+	      {product:"Modern Black Crystal",Rupees:"Rs. 2,980.00"},
+	      {product:"Mild Steel With Brass",Rupees:"Rs. 8,950.00"},
+	      {product:"Crystal Belle",Rupees:"Rs. 3,999.00"}];
+	      
+function loaddata(data){
+  const ul = document.getElementById("result");
+   ul.innerHTML="";
+  data.forEach(user => {
+    const li = document.createElement("li");
+    li.textContent = `${user.product} - ${user.Rupees}`;
+    ul.appendChild(li);
+  });}
+loaddata(users);
+
+function searchData() {
+  const searchValue = document.getElementById("search").value.toLowerCase();
+
+  const filteredData = users.filter(user =>
+    user.product.toLowerCase().includes(searchValue)
+  );
+
+  loaddata(filteredData);
+}
+</script>
+</div>
+
+
+<div class="container">
+	<h3>Lamp</h3>
+   <div class="row">
+	<div class="col-sm-4">
+	<div class="form-box">
+	   <img src="22.jpg" alt="wall1" height="300" width="300">
+		<h3>Lotus Lamp</h3>
+		<p>Rs. 2,590.00</p>
+	   <a href="add.html"><button class="btn btn-primary">Buy Now</button></a>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="23.jpg" alt="wall1" height="300" width="300">
+		<h3>Tree Lamp</h3>
+		<p>Rs. 1,370.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="27.jpg" alt="wall1" height="300" width="300">
+		<h3>Decorative Lamp</h3>
+		<p>Rs. 5,540.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+   </div><br>
+
+
+	<h3>Wall Clock</h3>
+   <div class="row">
+	<div class="col-sm-4">
+	<div class="form-box">
+	   <img src="28.jpg" alt="wall1" height="300" width="300">
+		<h3>Wall Clock</h3>
+		<p>Rs. 2,980.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="29.jpg" alt="wall1" height="300" width="300">
+		<h3>Creative Clock</h3>
+		<p>Rs. 4,990.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="30.jpg" alt="wall1" height="300" width="300">
+		<h3>Lighting clock</h3>
+		<p>Rs. 5,550.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+   </div><br>
+
+
+<h3>Chandelier</h3>
+   <div class="row">
+	<div class="col-sm-4">
+	<div class="form-box">
+	   <img src="31.jpg" alt="wall1" height="300" width="300">
+		<h3>Modern Black Crystal</h3>
+		<p>Rs. 2,980.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="33.jpg" alt="wall1" height="300" width="300">
+		<h3>Mild Steel With Brass</h3>
+		<p>Rs. 8,950.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div>
+	<div class="col-sm-4">
+	<div class="form-box">
+	<img src="34.jpg" alt="wall1" height="300" width="300">
+		<h3>Crystal Belle</h3>
+		<p>Rs. 3,999.00</p>
+	   <button class="btn btn-primary">Buy Now</button>
+	</div>
+	</div><br>
+	<p>
+		<a href="#">Back To Top</a>
+	</p>
+   </div>
+</div>
+</div>
+</body>
+</html>
